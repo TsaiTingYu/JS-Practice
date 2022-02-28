@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create IMG</title>
+</head>
+<body>
+	<div id ="here" style="position: absolute;"></div> <!-- 創一個div -->
+	
+<script  type="text/javascript">
+	
+	var a = document.getElementById("here");
+	
+	var imgObj = document.createElement("img");   //動態創建圖片
+	imgObj.src = "3.png";
+	a.append(imgObj);  
+	
+	
+	document.onkeydown = function(event){
+			
+		switch(event.keyCode){
+			
+			//往左走
+			case 37:         
+				a.style.left = a.offsetLeft - 10 + "px";   //移動div
+				break;
+			
+			//往上走 
+			case 38:           
+				a.style.top = a.offsetTop - 10 + "px";
+				break;
+				
+			//往右走	
+			case 39:           
+				a.style.left = a.offsetLeft + 10 + "px";
+				break;
+			
+			//往下走	
+			case 40:           
+				a.style.top = a.offsetTop + 10 + "px";
+				break;
+		}
+	}
+	
+</script>
+</body>
+</html>

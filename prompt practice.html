@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>编程题</title>
+	<script type="text/javascript">
+
+	var max = 0
+	var min = 0   
+	
+			 
+	while(true){
+		var num = Number(prompt("請輸入一個整數"));
+		if (max == 0 && min == 0){                //為了排除第一次輸入的情況，因為只有第一次輸入的時候MAX和MIN是0
+			max = num;
+			min = num;
+		}
+		
+		if (num == 0){
+			break;
+		}
+		
+		if (num >max){
+			max = num;
+		}else if(num<min) {
+			min=num;
+		}
+		
+	}
+	
+	document.write("最大值:"+ max);
+	document.write("</br>");
+	document.write("最小值:"+ min);
+	
+	
+	
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

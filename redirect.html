@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>計十五秒鐘後跳轉</title>
+	<script type="text/javascript">
+		
+	window.onload = function(){
+		var div = document.getElementById("time");
+		var time = 5;
+		var countDown = setInterval(function(){
+			if(time == 0){
+				location.href = "https://banma-school.com/";
+			} else {
+				div.innerHTML = "倒計時," + time + "秒後跳轉到www.banma-school.com";
+				time--;
+			}
+		},1000)
+	}
+		
+	</script>
+</head>
+<body>
+<div id = "time"></div>
+
+</body>
+</html>

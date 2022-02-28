@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html onclick="showImg(event)" >
+<head>
+	<title>點擊出現圖片</title>
+	
+</head>
+<body>
+	<script>
+	
+	function showImg(e){
+		
+		var imgObj = document.createElement("img");   //動態創建圖片
+		imgObj.src = "2.png";
+		
+		imgObj.style.position = "absolute";   //定位圖片位置為鼠標位置
+		imgObj.style.left = e.clientX + "px";
+		imgObj.style.top = e.clientY + "px";
+		
+		document.body.append(imgObj);  //插入圖片
+	}
+		
+	</script>
+
+</body>
+</html>
+

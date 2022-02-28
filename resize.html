@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>監聽窗口變化</title>
+	<script type="text/javascript">
+		
+		
+		window.addEventListener("resize",show_size);       //監聽窗口大小變更就調用show_size函數
+			
+		function show_size(){
+			
+			w=document.documentElement.clientWidth;      //  窗口的寬
+			h=document.documentElement.clientHeight; 	  // 窗口的高
+			
+			var wContent = document.getElementById("www");    // 找到span www的位置
+			wContent.innerHTML=w;                             //填入窗口的寬
+				
+			var hContent = document.getElementById("hhh");    //找到span hhh的位置
+			hContent.innerHTML=h;                             //填入窗口的高
+				
+		}
+		
+	</script>
+</head>
+<body>
+窗口目前大小:宽:<span id="www"></span> 
+			高:<span id="hhh"></span>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript">
+	function show_coords(e)
+	{
+		x=e.clientX;
+		y=e.clientY;
+		alert("X 坐标: " + x + ", Y 坐标: " + y)
+	}
+</script>
+</head>
+
+<body onmousedown="show_coords(event)">    <!-- 參數必須是event -->
+
+<p>請典籍空白處，會顯示鼠標得x,y位置</p>
+
+</body>
+</html>

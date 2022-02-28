@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>走馬灯</title>
+	<script type="text/javascript">
+		
+		var arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","　","　","　","　","　","　"];
+		
+		function led(){
+			var e = arr.shift();  //刪除第一個元素並返回該元素
+			arr.push(e);          //把一個對象添加到數組末尾
+			
+			var showText = '【';   //新建一個字串
+			for(var i = 0;i < arr.length; i++){   //用for建立字符串內容  //i取值得範圍就是輸出的範圍
+				showText += arr[i];
+			} showText += '】';
+			
+		
+			document.getElementById("demo").innerHTML = showText;
+			window.setTimeout("led()",1000);
+		}
+
+		window.onload = led;
+	</script>
+</head>
+<body>
+<p id="demo"></p>
+</body>
+</html>

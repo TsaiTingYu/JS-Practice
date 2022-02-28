@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+	function whichButton(event){
+		
+		var x = event.keyCode;
+		
+		if (event.shiftKey && x == 49){
+			alert("通常攻撃");
+		} else if (event.shiftKey && x == 50){
+			alert("全体攻撃");
+		} else if (event.ctrlKey && x == 49){
+			alert("普通防御");
+		} else if (event.ctrlKey && x == 50){
+			alert("全体防御");
+		}	
+	}
+
+</script>
+</head>
+
+<body onkeyup="whichButton(event)">
+
+</body>
+
+</html>

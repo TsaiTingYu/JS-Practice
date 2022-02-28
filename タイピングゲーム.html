@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>タイピングゲーム</title>
+	
+</head>
+<body id = "here"  onkeydown = "compare(event)">
+
+
+<script type="text/javascript">
+	function createCode() {
+		for (var i = 0; i < 8; i++) {
+			var azcode = 65 + Math.floor(Math.random() * 26);
+			numArray.push(azcode);
+			var az = String.fromCharCode(azcode);
+			codeArray.push(az);
+		}
+
+		for (var j = 0; j < codeArray.length; j++) {
+			var b = document.createElement("span");
+			b.innerHTML = codeArray[j];
+			b.style.fontSize = "80px";
+			b.style.color = "black";
+			here.append(b);
+		}
+	}
+
+	var codeArray = [];
+	var numArray = [];
+	var here = document.getElementById("here");
+	
+	
+	function compare(e) {
+
+		console.log(numArray[target]);
+		console.log(e.keyCode);
+		console.log(spans[target]);
+		
+		if (numArray[target] == e.keyCode){
+			spans[target].style.color = "green";
+			target++;		
+		}
+	
+		if (spans[7].style.color == "green") {
+			alert("成功!");
+			here.innerHTML = "";
+			numArray = [];
+			codeArray = [];
+			target = 0;
+			createCode(); 
+		}	
+	}
+	
+	
+	createCode();
+	var target = 0;
+	var spans = document.getElementsByTagName("span");
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>檢測屬標位置</title>
+	<script type="text/javascript">
+		
+		window.addEventListener("mousemove",show_coords);       //監聽屬標移動就調用show_cooders函數
+	
+		function show_coords(e){
+			
+			x=e.clientX;      // x的座標
+			y=e.clientY; 	  // y的座標
+			
+			var xContent = document.getElementById("xxx");    // 找到span  x的位置
+			xContent.innerHTML=x;                             //填入x座標的位置
+				
+			var yContent = document.getElementById("yyy");    //找到span y的位置
+			yContent.innerHTML=y;                             //填入y座標的位置	
+		}
+	
+	
+	</script>
+</head>
+<body >
+	鼠標目前位置:X:<span id = "xxx"></span>
+				Y:<span id = "yyy"></span>
+</body>
+</html>
+

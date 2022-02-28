@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+	<script type="text/javascript">
+	   
+		function loadDoc(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					document.getElementById("demo").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET","/banma.txt",true);
+			xhttp.send();
+		}
+	</script>
+</head>
+<body>
+	<div id = "demo"> 
+		<button type="button" onclick="loadDoc()"> 按一下</button>
+	</div
+</body>
+</html>
